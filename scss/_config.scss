@@ -6,3 +6,18 @@ $primary-color: #e3e1e4;
 $hover-link-color: #9e16c0;
 $btn-color: #201625;
 $btn-font-color: #ffffff;
+
+//  set text color based on bg
+@function set-text-color($color) {
+    @if(lightness($color) > 70%) {
+        @return #212121;
+} @else {
+        @return #ffffff;
+}
+}
+
+// mixin colors set backgoround and text color
+@mixin set-background($color) {
+    background-color: $color;
+    color: set-text-color($color);
+}

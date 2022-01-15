@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: $light-color;
+    // background-color: $light-color;
     font-family: $font-stack;   
     color: $dark-color;
     line-height: 1.6;
@@ -27,8 +27,7 @@ a {
 }
 
 .showcase {
-    background-color: $primary-color;
-    color: $dark-color;
+    @include set-background($primary-color);
     height: 600px;
 
     nav {
@@ -43,7 +42,7 @@ a {
             li {
                 margin-right: 20px;
                 a {
-                    color: $dark-color;
+                    color: set-text-color($dark-color);
                     text-decoration: none;
                     &:hover {
                         color: $hover-link-color;
