@@ -11,18 +11,13 @@
 
 .btn-primary {
     @extend %btn;
-    background-color: darken($primary-color, 10%);
-    color: $dark-color;
-            &:hover {
-            color: $hover-link-color;
-        }
-
+    @include set-background(darken($primary-color, 10%));
 }
 
 .btn-secondary { 
     @extend %btn;
     color: $btn-font-color;
-    background-color: $btn-color;
+    @include set-background($btn-color);
     font-weight: bold;
     &:hover {
             background-color: $hover-link-color;

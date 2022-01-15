@@ -1,6 +1,6 @@
 @import 'config';
-@import 'util';
-@import '_btn';
+
+
 
 * {
     box-sizing: border-box;
@@ -11,7 +11,7 @@
 body {
     // background-color: $light-color;
     font-family: $font-stack;   
-    color: $dark-color;
+    // color: set-text-color($dark-color);
     line-height: 1.6;
     width: 100%;
     margin: auto;
@@ -34,6 +34,7 @@ a {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: set-text-color($light-color);
         padding: 0 20px;
         ul {
             display: flex;
@@ -42,7 +43,7 @@ a {
             li {
                 margin-right: 20px;
                 a {
-                    color: set-text-color($dark-color);
+                    color: set-text-color($light-color);
                     text-decoration: none;
                     &:hover {
                         color: $hover-link-color;
@@ -51,19 +52,14 @@ a {
             }
         }
     }
-    a {
-        text-decoration: none;
-
-    }
-    &-content {
+    .showcase-content {
         height: 100%;
         width: 80%;
         margin: auto;
         display: flex;
         align-items: center;
         justify-content: center;
-
-
+        margin-top: 50px;
         img {
             width: 50%;
         }
@@ -72,10 +68,11 @@ a {
             font-size: 3em;
             line-height: 1.2;
         }
-
-        p {
-            margin: 20px 0;
-        }
     }
 }
+
+
+@import 'util';
+@import '_btn';
+@import '_mob';
 
