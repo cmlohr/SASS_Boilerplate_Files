@@ -1,0 +1,82 @@
+@import 'config';
+@import 'util';
+@import '_btn';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $light-color;
+    font-family: $font-stack;   
+    color: $dark-color;
+    line-height: 1.6;
+    width: 100%;
+    margin: auto;
+
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.showcase {
+    background-color: $primary-color;
+    color: $dark-color;
+    height: 600px;
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        ul {
+            display: flex;
+            list-style: none;
+
+            li {
+                margin-right: 20px;
+                a {
+                    color: $dark-color;
+                    text-decoration: none;
+                    &:hover {
+                        color: $hover-link-color;
+                    }
+                }
+            }
+        }
+    }
+    a {
+        text-decoration: none;
+
+    }
+    &-content {
+        height: 100%;
+        width: 80%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        img {
+            width: 50%;
+        }
+
+        h1 {
+            font-size: 3em;
+            line-height: 1.2;
+        }
+
+        p {
+            margin: 20px 0;
+        }
+    }
+}
+
